@@ -28,60 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewLista = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnBusquedaU = new System.Windows.Forms.Button();
             this.btnAñadir = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.buttonRefrescar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLista)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridViewLista
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridViewLista.AllowUserToAddRows = false;
+            this.dataGridViewLista.AllowUserToDeleteRows = false;
+            this.dataGridViewLista.AllowUserToResizeColumns = false;
+            this.dataGridViewLista.AllowUserToResizeRows = false;
+            this.dataGridViewLista.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(286, 76);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(728, 913);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridViewLista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewLista.EnableHeadersVisualStyles = false;
+            this.dataGridViewLista.Location = new System.Drawing.Point(184, 76);
+            this.dataGridViewLista.Name = "dataGridViewLista";
+            this.dataGridViewLista.ReadOnly = true;
+            this.dataGridViewLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridViewLista.Size = new System.Drawing.Size(914, 913);
+            this.dataGridViewLista.TabIndex = 0;
+            this.dataGridViewLista.VirtualMode = true;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnAñadir);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(280, 989);
+            this.panel1.Size = new System.Drawing.Size(178, 989);
             this.panel1.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(8, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(184, 20);
-            this.textBox1.TabIndex = 0;
-            // 
-            // btnBusquedaU
-            // 
-            this.btnBusquedaU.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBusquedaU.BackColor = System.Drawing.Color.Indigo;
-            this.btnBusquedaU.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBusquedaU.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBusquedaU.ForeColor = System.Drawing.Color.White;
-            this.btnBusquedaU.Location = new System.Drawing.Point(198, 23);
-            this.btnBusquedaU.Name = "btnBusquedaU";
-            this.btnBusquedaU.Size = new System.Drawing.Size(135, 26);
-            this.btnBusquedaU.TabIndex = 1;
-            this.btnBusquedaU.Text = "Buscar Usuario";
-            this.btnBusquedaU.UseVisualStyleBackColor = false;
             // 
             // btnAñadir
             // 
@@ -89,7 +70,7 @@
             this.btnAñadir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAñadir.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAñadir.ForeColor = System.Drawing.Color.White;
-            this.btnAñadir.Location = new System.Drawing.Point(62, 29);
+            this.btnAñadir.Location = new System.Drawing.Point(14, 20);
             this.btnAñadir.Name = "btnAñadir";
             this.btnAñadir.Size = new System.Drawing.Size(135, 26);
             this.btnAñadir.TabIndex = 2;
@@ -99,20 +80,26 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.btnBusquedaU);
-            this.panel2.Location = new System.Drawing.Point(286, 6);
+            this.panel2.Controls.Add(this.buttonRefrescar);
+            this.panel2.Controls.Add(this.btnAñadir);
+            this.panel2.Location = new System.Drawing.Point(184, 6);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(607, 64);
+            this.panel2.Size = new System.Drawing.Size(709, 64);
             this.panel2.TabIndex = 2;
             // 
-            // panel3
+            // buttonRefrescar
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Location = new System.Drawing.Point(1020, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(81, 989);
-            this.panel3.TabIndex = 3;
+            this.buttonRefrescar.BackColor = System.Drawing.Color.Indigo;
+            this.buttonRefrescar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonRefrescar.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefrescar.ForeColor = System.Drawing.Color.White;
+            this.buttonRefrescar.Location = new System.Drawing.Point(173, 20);
+            this.buttonRefrescar.Name = "buttonRefrescar";
+            this.buttonRefrescar.Size = new System.Drawing.Size(135, 26);
+            this.buttonRefrescar.TabIndex = 3;
+            this.buttonRefrescar.Text = "Refrescar";
+            this.buttonRefrescar.UseVisualStyleBackColor = false;
+            this.buttonRefrescar.Click += new System.EventHandler(this.buttonRefrescar_Click);
             // 
             // CUPaneUsuario
             // 
@@ -120,26 +107,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.dataGridViewLista);
             this.Name = "CUPaneUsuario";
             this.Size = new System.Drawing.Size(1101, 989);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLista)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewLista;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnBusquedaU;
         private System.Windows.Forms.Button btnAñadir;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button buttonRefrescar;
     }
 }
